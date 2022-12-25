@@ -163,6 +163,8 @@ void GAS_Can_sendMessage_Temp()
 
 	TxMailBox2 = HAL_CAN_GetTxMailboxesFreeLevel(&hcan2);
 	HAL_CAN_AddTxMessage(&hcan2, &canTxHeader2, &T_BatteryTemp.TxData[0], &TxMailBox2);
+	//T_BatteryTemp: Battery_T on GAS_Can.h, highest temp, lowest temp, etc
+	//STM32_TempMonitorID, BatteryInsideID difference?
 
 }
 
